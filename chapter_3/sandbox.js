@@ -1,11 +1,26 @@
-// logical operators - OR || and AND &&
+// logical NOT (!)
 
-const password = 'p@ss';
+// let user = false;
 
-if(password.length >= 12 && password.includes('@')){
-    console.log('that password is mighty strong');
-} else if(password.length >= 8 || password.includes('@') && password.length > 5){    // we use else if in this case to run a separate loop.
-    console.log('that password is strong enough');
-} else {
-    console.log('password is not long enough');
+// if(!user){
+//     console.log('User is not logged in')
+
+// }
+
+// break and continue
+
+const scores = [50, 25, 0, 30, 100, 20, 10];
+
+for(let i = 0; i < scores.length; i++){
+    
+    if(scores[i] === 0){
+        continue;   // jumps out of the loop
+    }
+
+    console.log('your score: ', scores[i]);
+
+    if(scores[i] === 100){
+        console.log('congrats, you got the top score');
+        break;
+    }
 }
