@@ -1,27 +1,17 @@
-// strings
-console.log('hello, world');
+// common string methods
 
-let email = 'mario@thenetninja.co.uk'
-console.log(email);
+let email = 'mario@thenetninja.co.uk';
 
-// string concatenation
+// let result = email.lastIndexOf('n');
 
-let firstName = 'Brandon';
-let lastName = 'Sanderson';
+// let result = email.slice(2, 5);
 
-let fullName = firstName + ' ' + lastName;
-console.log(fullName);
+// let result = email.substr(4, 10);
 
-// getting characters
-console.log(fullName[2]);
+// let result = email.replace('m', 'w');
 
-// string length
-console.log(fullName.length);
+// let result = email.replace('n', 'w');
+// note: only replaces the first instance of n
 
-// string methods
-console.log(fullName.toUpperCase());
-let result = fullName.toLowerCase();
-console.log(result, fullName);
 
-let index = email.indexOf('@')
-console.log(index);
+console.log(result);
