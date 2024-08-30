@@ -1,10 +1,18 @@
-const content = document.querySelector('p');
+const paras = document.querySelectorAll('p');
 
-console.log(content.classList);
-// to get classes that an element has
+paras.forEach(p => {
+    console.log(p.textContent);     // difference from innerText? innerText is only for visible text
+    
+    if(p.textContent.includes('error')){
+        p.classList.add('error');
+    }
+    if(p.textContent.includes('success')){
+        p.classList.add('success');
+    }
 
-content.classList.add('error');
-// adding a class to it
+});
 
-content.classList.remove('error');
-content.classList.add('success');
+const title = document.querySelector('.title');
+
+title.classList.toggle('test');
+title.classList.toggle('test');
