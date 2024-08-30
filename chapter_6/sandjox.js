@@ -1,27 +1,22 @@
-const para = document.querySelector('p');
+const link = document.querySelector('a');
 
-// console.log(para.innerText); // innerText is a property, not a method
+console.log(link.getAttribute('href'));
+// google.com, takes the attribute of the 1st a tag
 
-para.innerText = 'ninjas are awesome';
-// can use += to append instead
 
-const paras = document.querySelectorAll('p');
+link.setAttribute('href', 'https://thenetninja.co.uk');
+// now links to net ninja site
+link.innerText = 'TheNet Ninja Website';
+// changes the text of the link
 
-// iterates through all p and appends new text
-// paras.forEach(para => {
-//     console.log(para.innerText);
-//     para.innerText += ' new text';
-// });
+const mssg = document.querySelector('p');
 
-const content = document.querySelector('.content');
+console.log(mssg.getAttribute('class'));
+// gets 'error' i.e. the class of that p tag
 
-// // console.log(content.innerHTML);
+mssg.setAttribute('class', 'success');
+// changes the class from error to success
 
-// content.innerHTML = '<h2>This is a new H2</h2>';
-
-const people = ['mario', 'luigi', 'yoshi'];
-
-people.forEach(person => {
-    content.innerHTML += `<p>${person}</p>`
-});
-
+mssg.setAttribute('style', 'color:green');
+// there was no style attribute, but JS added it on anyway
+// text is now green
