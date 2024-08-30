@@ -1,26 +1,24 @@
-// arguments & parameters
+// returning values
 
-// when we make the function, we define a parameter to be used in the function
-const speak = function(name){   
-    console.log(`good day ${name}`);
+const calcArea = function(radius){
+    let area = 3.14 * radius**2;
+    return area;
 };
 
-// console.log(name) --> doesn't work because name is local variable
+// since we're returning area, now we can save that value in memory 
+// when the function is called.
+const areaResult = calcArea(5);
+console.log(areaResult); // 78.5
 
-// now we pass a value 'mario' (an argument) when we invoke the function:
-// result: 'good day mario'
-speak('mario');
+// trying example on my own
+const calcVol = function(area, height){
+    let vol = area * height;
+    return vol;
+}
 
-// 2 parameters
-const speakAgain = function(name, time){   
-    console.log(`good ${time} ${name}`);
-};
-
-speakAgain('mario', 'morning'); // good morning mario
-
-// invoking without arguments - need default values
-const speakMore = function(name = 'gamer', time = 'evening'){   
-    console.log(`good ${time} ${name}`);
-};
-
-speakMore(); // good evening gamer
+const areaGiven = 10;
+const heightGiven = 2;
+console.log(calcVol(areaGiven, heightGiven));
+// or
+let result = calcVol(areaGiven, heightGiven);
+console.log(result);
