@@ -1,22 +1,23 @@
-// const para = document.querySelector('p');
+// get an element by ID
+const title = document.getElementById('page-title');
+// always grabs ONE
+console.log(title);
 
-// const para = document.querySelector('.error');
 
+// get elememnts by their class name
 
-const para = document.querySelector('div.error');
-// you can also right click inspect an element and get selector
-
-// console.log(para);
-
-const paras = document.querySelectorAll('p');
-// stores as a collection
-
-console.log(paras); // paras[0] grab first node
-
-// paras.forEach(para => {
-//     console.log(para);
-// })
-
-const errors = document.querySelectorAll('.error');
+const errors = document.getElementsByClassName('error');
 
 console.log(errors);
+// cannot use ForEach on HTML collection
+// errors.forEach(error => {
+//     console.log(error); // errors.forEach is not a function
+// })
+
+
+// get elements by their tag name
+
+const paras = document.getElementsByTagName('p');
+
+console.log(paras);
+console.log(paras[1]);
