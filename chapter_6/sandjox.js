@@ -1,23 +1,27 @@
-// get an element by ID
-const title = document.getElementById('page-title');
-// always grabs ONE
-console.log(title);
+const para = document.querySelector('p');
 
+// console.log(para.innerText); // innerText is a property, not a method
 
-// get elememnts by their class name
+para.innerText = 'ninjas are awesome';
+// can use += to append instead
 
-const errors = document.getElementsByClassName('error');
+const paras = document.querySelectorAll('p');
 
-console.log(errors);
-// cannot use ForEach on HTML collection
-// errors.forEach(error => {
-//     console.log(error); // errors.forEach is not a function
-// })
+// iterates through all p and appends new text
+// paras.forEach(para => {
+//     console.log(para.innerText);
+//     para.innerText += ' new text';
+// });
 
+const content = document.querySelector('.content');
 
-// get elements by their tag name
+// // console.log(content.innerHTML);
 
-const paras = document.getElementsByTagName('p');
+// content.innerHTML = '<h2>This is a new H2</h2>';
 
-console.log(paras);
-console.log(paras[1]);
+const people = ['mario', 'luigi', 'yoshi'];
+
+people.forEach(person => {
+    content.innerHTML += `<p>${person}</p>`
+});
+
