@@ -1,35 +1,18 @@
-// object literals
+// Math object
 
-// const blogs = [
-//     { title: 'why mac & cheese rules', likes: 30},
-//     { title: '10 things to make with marmite', likes: 50}
-// ];
+console.log(Math.PI);
 
-// console.log(blogs);
+console.log(Math.E);
 
-let user = {
-    name: 'crystal',
-    age: 30,
-    email: 'crystal@thenetninja.co.uk',
-    location: 'berlin',
-    blogs: [
-        { title: 'why mac & cheese rules', likes: 30},
-        { title: '10 things to make with marmite', likes: 50}
-    ],
-    login: function(){
-        console.log('the user logged in');
-    },
-    logout: function(){
-        console.log('the user logged out');
-    },
-    logBlogs(){
-        // console.log(this.blogs);
-        console.log('This user has written the following blogs: ');
-        this.blogs.forEach(blog => {
-            console.log(blog.title, blog.likes);
-        });
-    }
-};
+const area = 7.7;
 
-user.logBlogs();
+console.log(Math.round(area)); //floor(area) will round to 7, ceil is opposite that
 
+console.log(Math.trunc(area));
+
+// random numbers
+
+const random = Math.random(); // always between 0 and 1
+
+console.log(random);
+console.log((random)*100);
